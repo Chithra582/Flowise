@@ -1,0 +1,17 @@
+name: "vectorstore-node-manager"
+description: "Manages vector database index connections, embedding models, and similarity queries."
+input_schema:
+  type: "object"
+  properties:
+    provider:
+      type: "string"
+      description: "Vector database provider e.g. pinecone, qdrant, chroma, pgvector."
+    query_text:
+      type: "string"
+      description: "Search text query to embed and retrieve context for."
+    top_k:
+      type: "integer"
+      description: "Number of nearest neighbor context chunks to return."
+  required:
+    - "provider"
+    - "query_text"

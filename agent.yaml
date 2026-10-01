@@ -1,0 +1,64 @@
+spec_version: "0.1.0"
+name: "flowise-agentflow-runtime"
+version: "1.0.0"
+description: >
+  Visual orchestration runtime for executing multi-agent Agentflows,
+  LangChain/LlamaIndex pipelines, vector retrieval chains, and autonomous tool nodes.
+author: "Chithra R"
+license: "Apache-2.0"
+
+model:
+  preferred: "claude-3-5-sonnet"
+  fallback:
+    - "gpt-4o"
+    - "gemini-2.0-flash"
+  constraints:
+    temperature: 0.2
+    max_tokens: 8192
+
+skills:
+  - agentflow-graph-orchestration
+  - vector-retrieval-pipeline
+  - tool-node-sandboxing
+  - multimodal-chat-streaming
+
+tools:
+  - agentflow-graph-compiler
+  - vectorstore-node-manager
+  - sandboxed-code-runner
+  - credential-vault-bridge
+  - chat-memory-coordinator
+
+runtime:
+  max_turns: 25
+  temperature: 0.2
+  timeout: 180
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - mitre-atlas
+    - owasp-llm
+  data_governance:
+    pii_handling: redact
+    data_classification: confidential
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - developer-tools
+  - visual-builder
+  - agentflow
+  - multi-agent
+  - langchain
+  - llamaindex
+  - vector-stores
+
+metadata:
+  domain: "developer-tools"
+  category: "Developer Tools"

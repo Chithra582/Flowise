@@ -1,0 +1,17 @@
+name: "chat-memory-coordinator"
+description: "Maintains, summarizes, and retrieves conversational history buffers per session."
+input_schema:
+  type: "object"
+  properties:
+    session_id:
+      type: "string"
+      description: "Unique conversational session identifier."
+    operation:
+      type: "string"
+      description: "Operation type: append_message, get_history, or clear_memory."
+    message_content:
+      type: "string"
+      description: "Message text to append when operation is append_message."
+  required:
+    - "session_id"
+    - "operation"

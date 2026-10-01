@@ -1,0 +1,17 @@
+name: "sandboxed-code-runner"
+description: "Executes custom JavaScript or Python tool scripts within isolated sandbox containers."
+input_schema:
+  type: "object"
+  properties:
+    runtime:
+      type: "string"
+      description: "Execution language runtime: javascript or python."
+    code_body:
+      type: "string"
+      description: "Source code string to execute inside the isolated sandbox."
+    input_vars:
+      type: "object"
+      description: "Dictionary of input variables passed into the script context."
+  required:
+    - "runtime"
+    - "code_body"

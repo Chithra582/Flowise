@@ -1,0 +1,13 @@
+name: "agentflow-graph-compiler"
+description: "Compiles visual canvas node definitions and edges into an executable DAG execution plan."
+input_schema:
+  type: "object"
+  properties:
+    canvas_json:
+      type: "string"
+      description: "Serialized JSON string representing the visual canvas nodes and connecting edges."
+    validate_cycles:
+      type: "boolean"
+      description: "Whether to validate and reject non-terminating cyclical node connections."
+  required:
+    - "canvas_json"

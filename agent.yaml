@@ -1,6 +1,6 @@
 spec_version: "0.1.0"
-name: "flowise-agentflow-runtime"
-version: "1.0.0"
+name: flowise
+version: 1.0.0
 description: >
   Visual orchestration runtime for executing multi-agent Agentflows,
   LangChain/LlamaIndex pipelines, vector retrieval chains, and autonomous tool nodes.
@@ -60,5 +60,5 @@ tags:
   - vector-stores
 
 metadata:
-  domain: "developer-tools"
-  category: "Developer Tools"
+  domain: Developer Tools / Visual Multi-Agent Orchestration & Flow Runtimes
+  category: Developer Tools
